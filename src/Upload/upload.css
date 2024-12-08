@@ -1,0 +1,128 @@
+.Main-Upload{
+    display: grid;
+    place-items: center;
+    height:100vh;
+}
+
+::root{
+    --background :rgb(0, 0, 0);
+}
+
+.upload-form-container{
+    width: 100%;
+    max-width:450px;
+    min-width:200px;
+    height:500px;
+    background-color: rgb(255, 255, 255) ;
+    box-shadow: 7px 7px 0 black;
+    padding:1rem 1.5rem;
+}
+
+form{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+form > div{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+form > div input{
+    border: 1px dashed black;
+    outline : none;
+    height:40px;
+    padding: 0 10px;
+    width:100%;
+    color : black;
+}
+
+
+form > div input:hover,.upload-area:hover{
+    border-color: blue;
+}
+
+form > div span{
+    color : black
+}
+
+.upload-area{
+    width:100%;
+    height:50%;
+    border:1px dashed black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    gap: 10px;
+    position: relative;
+}
+
+
+[type="submit"]{
+    width:100%;
+    height:40px;
+    background-color:#111;
+    border:none;
+    outline:none;
+    box-shadow: 4px 4px 0 rgb(0, 47, 237);
+    cursor:pointer;
+    font-size: 1.6rem;
+    text-transform:uppercase;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fetching{
+    background-color:#2e2c2cfb;
+    cursor: no-drop;
+}
+
+
+.upload-area img{
+    width:40px;
+    width:40px;
+}
+
+
+[type="file"]{
+    border:none;
+    width:100%;
+    height:100%;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+[type="file"]::file-selector-button {
+    opacity: 0;
+  }
+
+.errMsg{
+    font-size: 1.2rem;
+}
+
+.errMsg-conainer{
+    min-width: max-content;
+    height:30px;
+    display: grid;
+    place-items: center;
+    margin-top: 1rem;
+}
+
+.errMsg-conainer div{
+    background: black;
+}
+
+
+
