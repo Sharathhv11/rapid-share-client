@@ -1,0 +1,75 @@
+.download-main{
+    display: grid;
+    place-items: center;
+    height:100vh;
+    padding:0 3rem;
+}
+
+.download-container{
+    width: 100vw;
+    max-width:450px;
+    min-width:250px;
+    height:250px;
+    background-color: rgb(255, 255, 255) ;
+    box-shadow: 7px 7px 0 black;
+    padding:1rem 1.5rem;
+}
+
+
+/* Container styling */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;  
+    justify-content: center;
+    width:80%;
+    margin:0 auto;
+    align-content: center;
+    justify-items: center;
+}
+
+/* Card styling */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Filename styling */
+.filename {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+/* File info styling */
+.file-info {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Download button styling */
+.download-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color:rgb(42, 41, 41);
+}

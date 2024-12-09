@@ -2,6 +2,7 @@
     display: grid;
     place-items: center;
     height:100vh;
+    padding:0 3rem;
 }
 
 ::root{
@@ -9,9 +10,9 @@
 }
 
 .upload-form-container{
-    width: 100%;
+    width: 100vw;
     max-width:450px;
-    min-width:200px;
+    min-width:250px;
     height:500px;
     background-color: rgb(255, 255, 255) ;
     box-shadow: 7px 7px 0 black;

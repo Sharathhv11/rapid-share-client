@@ -3,6 +3,7 @@ import Home from "./Home/Home";
 import Upload from "./Upload/Upload";
 import { Toaster } from "react-hot-toast";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Download from "./Download/Download";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route exact path="/upload" element={<Upload />} />
-          <Route exact path="/download" element={<h1>downloading....</h1>} />
+          <Route exact path="/download" element={<Download/>} />
         </Routes>
       </BrowserRouter>
     </>

@@ -143,7 +143,11 @@ nav{
 
 
 @media (width<=1000px){
-    ma.Home-mainin section:first-child{
+    .Home-mainin section:first-child{
+        display: none;
+    }
+
+    .Home-main > section:first-child{
         display: none;
     }
 
