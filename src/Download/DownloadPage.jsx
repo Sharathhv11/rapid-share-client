@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import toast from "react-hot-toast";
 
 const DownloadPage = ({ data }) => {
@@ -6,7 +6,7 @@ const DownloadPage = ({ data }) => {
     document.title = "Rapid-Share | Download files"
   })
 
-  
+
   const downloadFile = async (event, file) => {
     event.preventDefault();
     
