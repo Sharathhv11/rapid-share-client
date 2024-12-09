@@ -6,8 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Download from "./Download/Download";
 import NotFound from "./components/NotFound";
 import Notdev from "./components/Notdev"
-import { useEffect } from "react";
-
 function App() {
   return (
     <>
