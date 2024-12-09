@@ -13,8 +13,8 @@ function Home() {
             </div>
           </section>
           <section id="Nav-Links">
-            <a href="#">about</a>
-            <a href>contact</a>
+            <Link to="/about">about</Link>
+            <Link to="/contact">contact</Link>
           </section>
         </nav>
         <main className="Home-main">
