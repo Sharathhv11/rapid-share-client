@@ -4,7 +4,9 @@ import toast from "react-hot-toast";
 const DownloadPage = ({ data }) => {
   const downloadFile = async (event, file) => {
     event.preventDefault();
-
+    useEffect(() => {
+      document.title = "Rapid-Share | Download files"
+    })
     try {
       const token = localStorage.getItem("token"); // Get the token from localStorage
 

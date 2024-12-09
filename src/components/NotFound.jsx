@@ -1,7 +1,10 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import notFound from "./../assets/notFound.png"
 
 const NotFound = () => {
+    useEffect(() => {
+        document.title = "404 not found"
+      })
   return (
     <div className='notFound-container-wrapper'>
     <div className='notFound-container'>

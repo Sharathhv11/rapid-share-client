@@ -84,6 +84,11 @@ const Upload = () => {
     };
   }, [inps.roomID, inps.password]);
 
+
+  useEffect(() => {
+    document.title = "Rapid-Share | Upload files"
+  })
+
   const handleOnChange = (event) => {
     setInps({
       ...inps,

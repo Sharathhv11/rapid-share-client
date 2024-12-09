@@ -43,7 +43,7 @@ const Download = () => {
   }, [inps.roomID, inps.password]);
 
   useEffect(()=>{
-    document.title = "Rapid-Share | download"
+    document.title = "Rapid-Share | Download files"
   },[])
 
   const handleDownload = async (event) => {
