@@ -5,8 +5,11 @@
     padding:0 3rem;
 }
 
-::root{
-    --background :rgb(0, 0, 0);
+/*! variables */
+:root{
+    --backgroud-color:#edf6f9;
+    --nav-background:#ffffff;
+    --text-color:#0066ff
 }
 
 .upload-form-container{
@@ -15,8 +18,9 @@
     min-width:250px;
     height:500px;
     background-color: rgb(255, 255, 255) ;
-    box-shadow: 7px 7px 0 black;
+    box-shadow: 0 0 4px #525252dc;
     padding:1rem 1.5rem;
+    border-radius: .2rem;
 }
 
 form{
@@ -36,27 +40,31 @@ form > div{
 }
 
 form > div input{
-    border: 1px dashed black;
+    border: 1px solid #adb5bd;
     outline : none;
     height:40px;
     padding: 0 10px;
     width:100%;
     color : black;
+    border-radius: .2rem;
 }
 
 
-form > div input:hover,.upload-area:hover{
-    border-color: blue;
+form > div input:focus,.upload-area:hover{
+    border-color: rgba(0, 0, 255, 0.354);
 }
 
 form > div span{
-    color : black
+    color : black;
+    font-weight: bold ;
+    color:black;
+    font-size:.8rem ;
 }
 
 .upload-area{
     width:100%;
     height:50%;
-    border:1px dashed black;
+    border:1px solid  #adb5bd;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,6 +73,7 @@ form > div span{
     text-align: center;
     gap: 10px;
     position: relative;
+    border-radius: .2rem;
 }
 
 
@@ -74,14 +83,19 @@ form > div span{
     background-color:#111;
     border:none;
     outline:none;
-    box-shadow: 4px 4px 0 rgb(0, 47, 237);
     cursor:pointer;
-    font-size: 1.6rem;
-    text-transform:uppercase;
+    font-size: 1.2rem;
+    text-transform:capitalize;
+    font-weight: bolder;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: .2rem;
+}
+
+[type="submit"]:hover{
+    background-color:#000000f1;
 }
 
 .fetching{
@@ -93,6 +107,12 @@ form > div span{
 .upload-area img{
     width:40px;
     width:40px;
+}
+.upload-area span{
+    font-weight: 700;
+    font-size: .7rem;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -109,21 +129,30 @@ form > div span{
     opacity: 0;
   }
 
-.errMsg{
-    font-size: 1.2rem;
+
+.error-messer-container
+{
+    display: flex ;
+    width:100%; 
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+    height: 10px;
+    
+    /* border:2px solid black; */
+}
+.error-indicator{
+    color: red;
+    font-size: .7rem;
+    margin-left: 4px;
 }
 
-.errMsg-conainer{
-    min-width: max-content;
-    height:30px;
-    display: grid;
-    place-items: center;
-    margin-top: 1rem;
+.error-red{
+    border-color: red !important;
 }
 
-.errMsg-conainer div{
-    background: black;
+input::placeholder{
+    font-size:.8rem ;
 }
-
 
 
