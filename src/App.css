@@ -1,227 +1,364 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:  sans-serif;
     font-optical-sizing: auto;
+    font-family:  sans-serif;
     font-style: normal;
-    color:black;
-    
+    color: black;
+
 }
+
+.poppins-thin {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .poppins-extralight {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-light {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /*in use*/
+  .poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  /*in use*/
+  .poppins-semibold {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .poppins-extrabold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .poppins-black-italic {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
 
 
 /*! variables */
-:root{
-    --backgroud-color:#edf6f9;
-    --nav-background:#ffffff;
-    --text-color:#0066ff
+:root {
+    --backgroud-color: #edf6f9;
+    --nav-background: #ffffff;
+    --text-color: #0066ff
 }
 
 
-html,body{
-    width:100%;
-    height:100%;
+html,
+body {
+    width: 100%;
+    height: 100%;
     min-width: max-content;
     background: var(--backgroud-color);
 }
 
-nav{
-    width:100%;
-    height:4rem;
+nav {
+    width: 100%;
+    height: 4rem;
     background: var(--nav-background);
-    padding:0 2rem;
-    display: flex;  
-    box-shadow: 4px 0 4px #525252dc;
+    padding: 0 2rem;
+    display: flex;
+    box-shadow: -1px 0 4px #525252dc;
 }
 
-#Logo{
-    width : 40%;
-    height:100%;
+#Logo {
+    width: 40%;
+    height: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
-.logo-container{
+.logo-container {
     max-width: 270px;
-    width: 100%; /* Ensures the container adjusts to the parent's width */
-    min-width: 150px;
-    height: auto; /* Ensures height adjusts proportionally */
-}
-.logo-container img{
     width: 100%;
-    height:100%;
+    /* Ensures the container adjusts to the parent's width */
+    min-width: 150px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left:-15px;
+    /* Ensures height adjusts proportionally */
 }
 
-#Nav-Links{
-    width:60%;
-    height:100%;
+.logo-container img {
+    width: 100%;
+    height: 100%;
+}
+
+#Nav-Links {
+    width: 60%;
+    height: 100%;
     display: flex;
     justify-content: end;
     align-items: center;
-    gap:1rem;
+    gap: 1rem;
 }
 
-#Nav-Links a{
-    color : #0066ff;
-    text-transform: uppercase;
+#Nav-Links a {
+    color: black;
+    text-transform: capitalize;
     text-decoration: none;
+    font-weight: bold;
 
 }
 
-.Home-main{
-    height: calc( 99vh - 60px );
+#Nav-Links a:hover {
+    color: rgba(46, 46, 46, 0.881);
+}
+
+.Home-main {
+    height: calc(99vh - 60px);
     display: flex;
-    padding:0 2rem;
+    padding: 0 2rem;
 }
 
-.Home-main > section:first-child{
-    width:50%;
-    height:100%;
+.Home-main>section:first-child {
+    width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#home-page-img-container,#home-page-img-container img{
-    width:100%;
-    height:400px;
+#home-page-img-container,
+#home-page-img-container img {
+    width: 100%;
+    height: 400px;
 }
 
-#home-page-img-container img{
+#home-page-img-container img {
     position: relative;
     object-fit: contain;
 }
 
-#main-Header{
+#main-Header {
     font-size: 4rem;
 }
 
-.main-header-2{
+.main-header-2 {
     display: flex;
     flex-direction: column;
     font-size: 20px;
     text-align: start;
 }
 
-#upload{
-    width:126px;
-    height:38px;
+#upload {
+    width: 126px;
+    height: 38px;
     color: white;
-    border:none;
+    border: none;
     outline: none;
-    cursor:pointer;
+    cursor: pointer;
     background: var(--text-color);
     border-radius: 5px;
     font-weight: bolder;
 }
 
 
-.Home-main section:last-child{
-    width:60%;
+.Home-main section:last-child {
+    width: 60%;
     display: flex;
-    justify-content: start; 
+    justify-content: start;
     align-items: center;
     flex-direction: column;
     margin: 3rem 0;
 }
 
-.section-2-main,.section-2-sub{
-    width:100%;
-    height:200px;
+.section-2-main,
+.section-2-sub {
+    width: 100%;
+    height: 200px;
     display: flex;
 
-    flex-direction: column  ;
+    flex-direction: column;
 }
 
-.span-headers{
+.span-headers {
     display: inline-block;
-    width:200px;
+    width: 200px;
 }
 
-.notFound-container{
-    width:300px;
-    height:300px;
+.notFound-container {
+    width: 300px;
+    height: 300px;
 }
 
-.notFound-container img{
-    width:100%;
-    height:100%;
+.notFound-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.notFound-container-wrapper{
-    width:100%;
-    height:100vh;
+.notFound-container-wrapper {
+    width: 100%;
+    height: 100vh;
     display: grid;
     place-items: center;
 }
 
-.notFound-container p{
-    text-align:center;
+.notFound-container p {
+    text-align: center;
 }
 
-.section-2-sub{
+.section-2-sub {
     /* border:2px solid black; */
     justify-content: center;
     align-items: center;
-    width:200px;
-    height:100%;
+    width: 200px;
+    height: 100%;
     max-height: max-content;
     background-color: #f8f9fa;
-    
+
     box-shadow: 0 0 4px #a3a6a9;
     align-self: flex-start;
 }
-.section-2-sub div{
-    width:100%;
-    height:50%;
+
+.section-2-sub div {
+    width: 100%;
+    height: 50%;
 }
-.upload-download-btn{
-    display:flex;
+
+.upload-download-btn {
+    display: flex;
     padding: 5px 10px;
     justify-content: start;
     padding-left: 1rem;
     align-items: center;
     gap: 5px;
-    width:100%;
-    border:none;
+    width: 100%;
+    border: none;
     outline: none;
     background-color: transparent;
     cursor: pointer;
     /* border:2px solid black; */
-    
+
 
 }
 
 
 .upload-download-btn:hover{
     background-color: #ecf8f8;
+    color: black;
 }
 
 
-.upload-download-btn p{
+.upload-download-btn p {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     text-transform: capitalize;
-    color: var(--text-color);
+    color: black;
+    transition: all .2s ease-in-out;
 }
 
 
-@media (width<=1000px){
-    .Home-mainin section:first-child{
+
+
+
+@media (width<=1000px) {
+    .Home-mainin section:first-child {
         display: none;
     }
 
-    .Home-main > section:first-child{
+    .Home-main>section:first-child {
         display: none;
     }
 
-    .Home-main section:last-child{
-        width:100%;
+    .Home-main section:last-child {
+        width: 100%;
     }
 
-    .section-2-main,.section-2-sub{
+    .section-2-main,
+    .section-2-sub {
         justify-content: center;
         align-items: center;
         align-self: center;

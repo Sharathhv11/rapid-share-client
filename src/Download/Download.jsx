@@ -13,6 +13,7 @@ const Download = () => {
   });
   const [roomIDErrMsg, setRoomIDErrMsg] = useState("");
   const [passwordErrMsg, setPasswordErrMsg] = useState("");
+  const [downloading,setDownloading] = useState(false);
 
   const [fetching, setFetching] = useState(false);
 
@@ -93,10 +94,13 @@ const Download = () => {
     
   };
 
-  const navigate = useNavigate();
+ 
 
   if (downloadData.length > 0) {
-    return <DownloadPage data={downloadData} />;
+    return <DownloadPage data={downloadData} state={{
+      downloading,
+      setDownloading
+    }}/>;
   }
 
   return (

@@ -1,5 +1,5 @@
 import HomeImg from "./../assets/Home-IMG.png";
-import RapidShare from "./../assets/RAPID-SHARE.svg";
+import RapidShare from "./../assets/appLogo2.png";
 import { Link } from "react-router-dom";
 import upload from "./../assets/folder_upload_fill.svg";
 import download from "./../assets/folder_download_fill.svg";
@@ -40,13 +40,12 @@ function Home() {
         <nav>
           <section id="Logo">
             <div className="logo-container">
-              {/* <img src={RapidShare} alt="logo" /> */}
-              RapidShare
+              <img src={RapidShare} alt="logo" />
             </div>
           </section>
           <section id="Nav-Links">
-            <Link to="/about">about</Link>
-            <Link to="/contact">contact</Link>
+            <Link to="/about" className="poppins-regular">about</Link>
+            <Link to="/contact" className="poppins-regular">contact</Link>
           </section>
         </nav>
         <main className="Home-main">
@@ -58,13 +57,13 @@ function Home() {
           <section>
             <div className="section-2-main">
               <div>
-                <span id="main-Header"> Get Started </span>
+                <span id="main-Header" className="poppins-medium"> Get Started </span>
               </div>
               <div className="main-header-2">
-                <span> Fast, Secure, and Effortless File </span>
-                <span>
+                <span className="poppins-regular"> Fast, Secure, and Effortless File </span>
+                <span className="poppins-regular">
                   Sharing –{" "}
-                  <span style={{ color: "#0066ff" }}>Anytime,Anywhere.</span>
+                  <span style={{ color: "#0066ff" }} className="poppins-regular">Anytime,Anywhere.</span>
                 </span>
               </div>
             </div>
@@ -76,7 +75,7 @@ function Home() {
                 }}>
                   <button className="upload-download-btn">
                   <img src={upload} alt="upload your files by clicking here" />
-                  <p className="link-headers">Upload</p>
+                  <p className="link-headers poppins-regular">Upload</p>
                 </button>
                 </Link>
                
@@ -92,7 +91,7 @@ function Home() {
                     src={download}
                     alt="upload your files by clicking here"
                   />
-                  <p className="link-headers">download</p>
+                  <p className="link-headers poppins-regular">download</p>
                 </button>
                 </Link>
                
@@ -101,9 +100,7 @@ function Home() {
           </section>
         </main>
       </div>
-      {/* <div className="faq-div">
-        <Faq data={data}></Faq>
-      </div> */}
+    
     </>
   );
 }

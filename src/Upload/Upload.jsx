@@ -154,7 +154,7 @@ const Upload = () => {
             </div>
 
             <div>
-              <span>Password*</span>
+              <span >Password*</span>
               <input
                 spellCheck="false"
                 onChange={handleOnChange}
@@ -186,7 +186,7 @@ const Upload = () => {
             <div className="upload-area">
               <input type="file" multiple ref={files} />
               <img src={upload} alt="upload image icon" />
-              <span>
+              <span >
                 Alternatively, you can select files by clicking Drag file(s) to
                 upload
                 <span

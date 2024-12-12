@@ -1,15 +1,16 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import toast from "react-hot-toast";
-
-const DownloadPage = ({ data }) => {
+import download from "./../assets/arrow_down_circle_fill.svg"
+const DownloadPage = ({ data,state }) => {
   useEffect(() => {
-    document.title = "Rapid-Share | Download files"
-  })
-
+    document.title = "Rapid-Share | Download files";
+  });
 
   const downloadFile = async (event, file) => {
     event.preventDefault();
-    
+
+    if(state.downloading) return;
+
     try {
       const token = localStorage.getItem("token"); // Get the token from localStorage
 
@@ -17,6 +18,7 @@ const DownloadPage = ({ data }) => {
         throw new Error("Authorization token is missing");
       }
 
+      state.setDownloading(true);
       const response = await fetch(file.fileUrl, {
         method: "GET",
         headers: {
@@ -46,25 +48,48 @@ const DownloadPage = ({ data }) => {
       window.URL.revokeObjectURL(url);
 
       toast.success("File downloaded successfully");
+      state.setDownloading(false);
     } catch (error) {
       console.error("Error while downloading the file:", error.message);
       toast.error(`Error: ${error.message}`);
     }
   };
 
+  function formatFileType(fileType, maxLength = 20) {
+    if (fileType.length > maxLength) {
+      return fileType.slice(0, maxLength - 3) + "...";
+    }
+    return fileType;
+  }
+
+  function formatFileSize(size) {
+    const sizePattern = /^([\d.]+)([A-Za-z]+)$/; // Pattern to match the numeric part and unit
+    const match = size.match(sizePattern);
+
+    if (match) {
+      const numericPart = parseFloat(match[1]); // Extract and parse the numeric part
+      const unit = match[2]; // Extract the unit
+      return `${numericPart.toFixed(2)}${unit}`; // Format with 2 decimal places
+    }
+
+    // Return the original string if it doesn't match the expected format
+    return size;
+  }
+
   return (
     <div className="cards-container">
       {data.map((file) => (
         <div key={file.fileUrl} className="card">
-          <h1 className="filename">{file.filename}</h1>
+          <h1 className="filename">{formatFileType(file.filename)}</h1>
           <p className="file-info">
-            <strong>Type:</strong> {file.fileType} <br />
-            <strong>Size:</strong> {file.fileSize}
+            <strong>Type:</strong> {formatFileType(file.fileType)} <br />
+            <strong>Size:</strong> {formatFileSize(file.fileSize)}
           </p>
           <button
-            className="download-button"
+            className={`download-button ${state.downloading?"disable":""}`}
             onClick={(event) => downloadFile(event, file)}
           >
+            <img src={download} alt="download logo" />
             Download
           </button>
         </div>
