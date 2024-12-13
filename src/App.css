@@ -5,122 +5,38 @@
     margin: 0;
     box-sizing: border-box;
     font-optical-sizing: auto;
-    font-family:  sans-serif;
+    font-family: sans-serif;
     font-style: normal;
     color: black;
 
 }
 
-.poppins-thin {
-    font-family: "Poppins", serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .poppins-extralight {
-    font-family: "Poppins", serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-  
-  .poppins-light {
-    font-family: "Poppins", serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .poppins-regular {
+.main-container {
+    height: 100vh
+}
+
+
+
+.poppins-regular {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  /*in use*/
-  .poppins-medium {
+}
+
+/*in use*/
+.poppins-medium {
     font-family: "Poppins", serif;
     font-weight: 500;
     font-style: normal;
-  }
-  
-  /*in use*/
-  .poppins-semibold {
+}
+
+/*in use*/
+.poppins-semibold {
     font-family: "Poppins", serif;
     font-weight: 600;
     font-style: normal;
-  }
-  
-  .poppins-bold {
-    font-family: "Poppins", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .poppins-extrabold {
-    font-family: "Poppins", serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-  .poppins-black {
-    font-family: "Poppins", serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .poppins-thin-italic {
-    font-family: "Poppins", serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .poppins-extralight-italic {
-    font-family: "Poppins", serif;
-    font-weight: 200;
-    font-style: italic;
-  }
-  
-  .poppins-light-italic {
-    font-family: "Poppins", serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .poppins-regular-italic {
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .poppins-medium-italic {
-    font-family: "Poppins", serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .poppins-semibold-italic {
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-  .poppins-bold-italic {
-    font-family: "Poppins", serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .poppins-extrabold-italic {
-    font-family: "Poppins", serif;
-    font-weight: 800;
-    font-style: italic;
-  }
-  
-  .poppins-black-italic {
-    font-family: "Poppins", serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-  
+}
+
 
 
 /*! variables */
@@ -166,7 +82,9 @@ nav {
     justify-content: center;
     align-items: center;
     position: relative;
-    left:-15px;
+    left: -15px;
+
+
     /* Ensures height adjusts proportionally */
 }
 
@@ -188,8 +106,7 @@ nav {
     color: black;
     text-transform: capitalize;
     text-decoration: none;
-    font-weight: bold;
-
+    font-weight: 400;
 }
 
 #Nav-Links a:hover {
@@ -197,17 +114,25 @@ nav {
 }
 
 .Home-main {
-    height: calc(99vh - 60px);
+    min-height: 100%;
     display: flex;
+    /* flex-direction: column; */
     padding: 0 2rem;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
+
+/* .Home-main section{
+    border:2px solid black;
+} */
 
 .Home-main>section:first-child {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 #home-page-img-container,
@@ -252,6 +177,7 @@ nav {
     align-items: center;
     flex-direction: column;
     margin: 3rem 0;
+
 }
 
 .section-2-main,
@@ -261,6 +187,11 @@ nav {
     display: flex;
 
     flex-direction: column;
+}
+
+.section-2-main>div {
+    /* width:100px; */
+    margin: 0 auto;
 }
 
 .span-headers {
@@ -294,11 +225,11 @@ nav {
     /* border:2px solid black; */
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 250px;
     height: 100%;
     max-height: max-content;
     background-color: #f8f9fa;
-
+    margin: 0 auto;
     box-shadow: 0 0 4px #a3a6a9;
     align-self: flex-start;
 }
@@ -326,7 +257,7 @@ nav {
 }
 
 
-.upload-download-btn:hover{
+.upload-download-btn:hover {
     background-color: #ecf8f8;
     color: black;
 }
@@ -344,6 +275,65 @@ nav {
 
 
 
+
+
+footer {
+    background-color: var(--nav-background);
+    height: 16vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: -1px 0 4px #525252dc;
+    gap: .4rem;
+}
+
+footer p {
+    width: 400px;
+    font-size: .7rem;
+    color: rgb(35, 35, 35);
+    font-weight: 300;
+}
+
+footer div {
+    width: 200px;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+footer div img {
+    transition: all .2s ease-in-out;
+    opacity: 0.9;
+}
+
+footer div img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+.mobile-img-container,
+.mobile-img-container img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+.mobile-img-container{
+    display: none;
+}
+
+.home-main-container-wrapper{
+    display: flex;
+}
+
+
+
+
 @media (width<=1000px) {
     .Home-mainin section:first-child {
         display: none;
@@ -351,6 +341,10 @@ nav {
 
     .Home-main>section:first-child {
         display: none;
+    }
+
+    .mobile-img-container{
+        display: block;
     }
 
     .Home-main section:last-child {

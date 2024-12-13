@@ -51,7 +51,7 @@ form > div input{
 
 
 form > div input:focus,.upload-area:hover{
-    border-color: rgba(0, 0, 255, 0.354);
+    border-color: rgba(0, 0, 255, 0.991);
 }
 
 form > div span{
