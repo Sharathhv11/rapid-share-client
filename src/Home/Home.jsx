@@ -89,8 +89,9 @@ function Home() {
             <div className="mobile-img-container">
               <img src={HomeImg} alt="share files" />
             </div>
-            <div className="section-2-sub">
-              <div>
+
+            <div className="section-2-container">
+            <div>
                 <Link
                   to="/upload"
                   style={{
@@ -125,6 +126,42 @@ function Home() {
                 </Link>
               </div>
             </div>
+            {/* <div className="section-2-sub">
+              <div>
+                <Link
+                  to="/upload"
+                  style={{
+                    width: "100%",
+                    textDecoration: "none",
+                  }}
+                >
+                  <button className="upload-download-btn">
+                    <img
+                      src={upload}
+                      alt="upload your files by clicking here"
+                    />
+                    <p className="link-headers poppins-regular">Upload</p>
+                  </button>
+                </Link>
+              </div>
+              <div>
+                <Link
+                  to="/download"
+                  style={{
+                    width: "100%",
+                    textDecoration: "none",
+                  }}
+                >
+                  <button className="upload-download-btn">
+                    <img
+                      src={download}
+                      alt="upload your files by clicking here"
+                    />
+                    <p className="link-headers poppins-regular">download</p>
+                  </button>
+                </Link>
+              </div>
+            </div> */}
           </section>
           {/* <div className="faq-container">
             <Faq data={data}/>
