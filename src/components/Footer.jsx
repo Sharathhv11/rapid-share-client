@@ -6,7 +6,7 @@ import x from "./../assets/social_x_fill.svg";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div>
         <a href="https://www.instagram.com/sharath___11/profilecard/?igsh=MW81cmx0czA4YXIxNQ==" target="_blank">
           <img src={insta} alt="" />

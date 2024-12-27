@@ -51,9 +51,9 @@ function Home() {
             <Link to="/about" className="poppins-regular">
               about
             </Link>
-            <Link to="/contact" className="poppins-regular">
-              contact
-            </Link>
+            {/* <Link to="/contact" className="poppins-regular"> */}
+            <a href="#footer">contact</a>
+            {/* </Link> */}
           </section>
         </nav>
         <main className="Home-main">
